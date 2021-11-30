@@ -72,15 +72,7 @@
               "$ref": "#/definitions/error"
             }
           }
-        },
-        "security": [
-          {
-            "petstore_auth": [
-              "write:token",
-              "read:token"
-            ]
-          }
-        ]
+        }
       },
       "get": {
         "tags": [
