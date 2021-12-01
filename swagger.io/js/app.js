@@ -1,7 +1,7 @@
 /**
  * 申明数据对象
  */
-const uri = './json/swagger2.json'
+const uri = './json/swagger.json'
 const data = {
   swagger: '',
   info: {
@@ -50,10 +50,7 @@ $.getJSON(uri, res => {
           }
         } else {
           resp.schema = {}
-          resp.schema.json = {
-            code: i4,
-            message: resp.description
-          }
+          // resp.schema.json = ''
         }
       }
       url.tags.map((item, index) => {
@@ -111,7 +108,7 @@ function schema2Json (definitions) {
       let describe = properties.description || ''
       switch (properties.type) {
         case 'integer':
-          value = describe ? 0 + ` // ${describe}` : 0
+          value = describe ? (properties.default || 0) + ` // ${describe}` : (properties.default || 0)
           break
         case 'boolean':
           value = describe ? (properties.default || false) + ` // ${describe}` : (properties.default || false)
