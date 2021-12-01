@@ -416,7 +416,10 @@ body {
           padding: 5px;
           line-height: 1.3;
           font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-          font-size: initial;
+          font-size: small;
+          @media (max-width: @small) {
+            font-size: x-small;
+          }
           &.error {
             background: fade(#333333, 30%);
           }

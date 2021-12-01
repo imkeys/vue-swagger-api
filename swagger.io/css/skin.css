@@ -398,7 +398,12 @@ body {
   padding: 5px;
   line-height: 1.3;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-  font-size: initial;
+  font-size: small;
+}
+@media (max-width: 1000px) {
+  .apis .box .table .code-description pre {
+    font-size: x-small;
+  }
 }
 .apis .box .table .code-description pre.error {
   background: rgba(51, 51, 51, 0.3);
