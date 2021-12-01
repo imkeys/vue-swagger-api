@@ -24,6 +24,10 @@ $.getJSON(uri, res => {
   for (let i in res) {
     data[i] = res[i]
   }
+  // 标签格式化
+  for (let g in data.tags) {
+    vm.$set(data.tags[g], 'visible', true)
+  }
   // 格式化模型
   for (let t in data.definitions) {
     data.definitions[t] = {
@@ -78,6 +82,10 @@ const vm = new Vue({
       item.visible = !item.visible
     },
     handleToggleModels (item) {
+      item.visible = !item.visible
+    },
+    handleToggleTags (item) {
+      console.log(item)
       item.visible = !item.visible
     },
     handleCopyUrl (e, text) {

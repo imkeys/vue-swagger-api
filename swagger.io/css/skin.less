@@ -111,6 +111,11 @@ body {
 }
 
 .apis {
+  position: relative;
+  margin: 0 0 20px;
+  @media (max-width: @small) {
+    margin: 0 0 10px;
+  }
   .group {
     position: relative;
     margin: 20px 0;
@@ -121,6 +126,7 @@ body {
   .tows {
     position: relative;
     padding: 10px 0;
+    cursor: pointer;
     h2, h3 {
       display: inline-flex;
     }

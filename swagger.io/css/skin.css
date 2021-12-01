@@ -95,6 +95,15 @@ body {
     padding: 0 10px;
   }
 }
+.apis {
+  position: relative;
+  margin: 0 0 20px;
+}
+@media (max-width: 1000px) {
+  .apis {
+    margin: 0 0 10px;
+  }
+}
 .apis .group {
   position: relative;
   margin: 20px 0;
@@ -107,6 +116,7 @@ body {
 .apis .tows {
   position: relative;
   padding: 10px 0;
+  cursor: pointer;
 }
 .apis .tows h2,
 .apis .tows h3 {
