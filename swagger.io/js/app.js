@@ -85,7 +85,6 @@ const vm = new Vue({
       item.visible = !item.visible
     },
     handleToggleTags (item) {
-      console.log(item)
       item.visible = !item.visible
     },
     handleCopyUrl (e, text) {
